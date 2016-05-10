@@ -1,3 +1,23 @@
 // Place all the styles related to the weather controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+table{
+  border: solid 1px;
+}
+td{
+  border: solid 1px;
+  padding: 10px;
+  text-align: left;
+}
+th{
+  border: solid 1px;
+  padding: 10px;
+  text-align: left;
+}
+.location-form{
+  margin: 10px;
+  margin-bottom: 50px;
+}
+.forecast-result{
+  margin: 10px;
+}

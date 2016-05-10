@@ -1,0 +1,31 @@
+<div class = "location-form">
+  <h3>Enter Your City and State:</h3>
+  <%= form_tag "/", method: :get do %>
+  <%= label_tag(:city, "City: ")%>
+  <%= text_field_tag(:city)%>
+  <%= label_tag(:state, "State: ")%>
+  <%= text_field_tag(:state)%>
+  <%= submit_tag("Get Weather Results")%>
+  <% end %>
+</div>
+<div class = "forecast-result">
+<h3>5 Day Forcast For <%= @title %></h3>
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Day</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Details</th>
+    </tr>
+    <% @forecast.each do |forecast|%>
+      <tr>
+        <td><%= forecast["date"] %></td>
+        <td><%= forecast["day"] %></td>
+        <td><%= forecast["high"] %> F</td>
+        <td><%= forecast["low"] %> F</td>
+        <td><%= forecast["text"] %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
